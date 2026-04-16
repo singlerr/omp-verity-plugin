@@ -1,0 +1,56 @@
+{
+	"name": "omp-verity-plugin",
+	"version": "0.1.0",
+	"description": "Perplexity/Vane-style research plugin for oh-my-pi using SearXNG with citation support and research-before-action policy",
+	"main": "src/index.ts",
+	"type": "module",
+	"scripts": {
+		"build": "tsc",
+		"typecheck": "tsc --noEmit"
+	},
+	"keywords": [
+		"omp-extension",
+		"oh-my-pi",
+		"research",
+		"searxng",
+		"citations",
+		"perplexity"
+	],
+	"peerDependencies": {
+		"@oh-my-pi/pi-coding-agent": ">=14.0.0",
+		"@oh-my-pi/pi-ai": ">=14.0.0",
+		"@sinclair/typebox": ">=0.34.0"
+	},
+	"peerDependenciesMeta": {
+		"@oh-my-pi/pi-coding-agent": {
+			"optional": false
+		},
+		"@oh-my-pi/pi-ai": {
+			"optional": true
+		},
+		"@sinclair/typebox": {
+			"optional": false
+		}
+	},
+	"devDependencies": {
+		"@oh-my-pi/pi-coding-agent": "latest",
+		"@sinclair/typebox": "^0.34.0",
+		"typescript": "^5.7.0"
+	},
+	"omp": {
+		"type": "extension",
+		"extensions": ["./src/index.ts"],
+		"settings": {
+			"searxngBaseUrl": {
+				"type": "string",
+				"description": "SearXNG instance base URL",
+				"env": "SEARXNG_BASE_URL"
+			},
+			"requireResearchForWrite": {
+				"type": "boolean",
+				"description": "Block dangerous tools until research is done",
+				"default": false
+			}
+		}
+	}
+}
