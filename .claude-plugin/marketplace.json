@@ -1,0 +1,15 @@
+{
+	"name": "verity-marketplace",
+	"owner": { "name": "singlerr" },
+	"metadata": {
+		"description": "Verity research plugins for oh-my-pi"
+	},
+	"plugins": [
+		{
+			"name": "verity-research",
+			"source": { "source": "github", "repo": "singlerr/omp-verity-plugin" },
+			"description": "Search → Summarize → Cite pipeline with SearXNG",
+			"version": "0.1.0"
+		}
+	]
+}
