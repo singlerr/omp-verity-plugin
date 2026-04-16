@@ -3,7 +3,7 @@ dist/
 *.js.map
 *.d.ts
 *.d.ts.map
-
+package-lock.json
 # OS
 .DS_Store
 Thumbs.db
